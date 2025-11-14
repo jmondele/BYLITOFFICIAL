@@ -82,7 +82,7 @@ const campaignData: Record<string, { title: string; images: string[] }> = {
       "/MOTT PROJEC X ADIDAS/mott (7).jpg",
     ],
   },
-  "gordo-dj": {
+  "dj-gordo": {
     title: "DJ Gordo",
     images: [
       "/GORDO PESTAÑA/PRINCIPAL gordo.jpg",

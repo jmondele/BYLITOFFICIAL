@@ -38,7 +38,7 @@ export default function Index() {
     { id: 3, image: "/vibram/PRINCIPAL vibram.jpg", title: "Vibram", span: "col-span-1", slug: "vibram" },
     { id: 4, image: "/millionvvv/PRINCIPALmillionvvv.jpg", title: "Millionvvv", span: "col-span-2", slug: "millionvvv" },
     { id: 5, image: "/MOTT PROJEC X ADIDAS/PRINCIPAL mott.jpg", title: "MOTT PROJEC X ADIDAS", span: "col-span-2", slug: "mott-projec-x-adidas" },
-    { id: 6, image: "/GORDO PESTAÑA/PRINCIPAL gordo.jpg", title: "Gordo DJ", span: "col-span-2", slug: "gordo-dj" },
+    { id: 6, image: "/GORDO PESTAÑA/PRINCIPAL gordo.jpg", title: "DJ Gordo", span: "col-span-2", slug: "dj-gordo" },
     { id: 7, image: "/DVM STUDIO/PRINCIPAL principal.jpg", title: "DVM STUDIO", span: "col-span-2", slug: "dvm-studio" },
     { id: 8, image: "/bemba/PRINCIPAL bemba.jpg", title: "BEMBA", span: "col-span-2", slug: "bemba" },
     { id: 9, image: "/lust panama/PRINCIPAL lust.jpg", title: "LUST PANAMA", span: "col-span-2", slug: "lust-panama" },
