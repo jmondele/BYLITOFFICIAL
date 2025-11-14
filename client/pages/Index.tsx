@@ -33,12 +33,16 @@ export default function Index() {
     }
   }, [currentVideoIndex]);
   const workCategories = [
-    { id: 1, image: "/6S5A5103.jpg", title: "Diesel", span: "col-span-2" },
-    { id: 2, image: "/redox_shoot_09.gif", title: "ReDOX", span: "col-span-1" },
-    { id: 3, image: "/6S5A7895.jpg", title: "Vibram", span: "col-span-1" },
-    { id: 4, image: "/caballos_07.jpg", title: "Millionvvv", span: "col-span-2" },
-    { id: 5, image: "/6S5A0927.jpg", title: "Polo", span: "col-span-2" },
-    { id: 6, image: "/LIT_1959.jpg", title: "Gordo DJ", span: "col-span-2" },
+    { id: 1, image: "/diesel/PRINCIPAL.jpg", title: "Diesel", span: "col-span-2", slug: "diesel" },
+    { id: 2, image: "/redox/PRINCIPAL redox.jpg", title: "ReDOX", span: "col-span-1", slug: "redox" },
+    { id: 3, image: "/vibram/PRINCIPAL vibram.jpg", title: "Vibram", span: "col-span-1", slug: "vibram" },
+    { id: 4, image: "/millionvvv/PRINCIPALmillionvvv.jpg", title: "Millionvvv", span: "col-span-2", slug: "millionvvv" },
+    { id: 5, image: "/MOTT PROJEC X ADIDAS/PRINCIPAL mott.jpg", title: "MOTT PROJEC X ADIDAS", span: "col-span-2", slug: "mott-projec-x-adidas" },
+    { id: 6, image: "/GORDO PESTAÑA/PRINCIPAL gordo.jpg", title: "Gordo DJ", span: "col-span-2", slug: "gordo-dj" },
+    { id: 7, image: "/DVM STUDIO/PRINCIPAL principal.jpg", title: "DVM STUDIO", span: "col-span-2", slug: "dvm-studio" },
+    { id: 8, image: "/bemba/PRINCIPAL bemba.jpg", title: "BEMBA", span: "col-span-2", slug: "bemba" },
+    { id: 9, image: "/lust panama/PRINCIPAL lust.jpg", title: "LUST PANAMA", span: "col-span-2", slug: "lust-panama" },
+    { id: 10, image: "/us projec/PRINCIPAL US.jpg", title: "US PROJEC", span: "col-span-2", slug: "us-projec" },
   ];
 
   const clientLogos = [
@@ -141,7 +145,7 @@ export default function Index() {
           {workCategories.map((category) => (
             <Link
               key={category.id}
-              to="/work"
+              to={`/campaign/${category.slug}`}
               className={`relative group ${category.span} aspect-video md:aspect-square overflow-hidden cursor-pointer`}
             >
               <img
