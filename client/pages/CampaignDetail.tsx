@@ -223,9 +223,9 @@ export default function CampaignDetail() {
       <Header variant="dark" />
 
       {/* Campaign Header */}
-      <section className="px-4 md:px-16 lg:px-36 py-12 md:py-16">
+      <section className="px-4 md:px-16 lg:px-36 pt-24 md:pt-32 pb-12 md:pb-16">
         <Link
-          to="/#work"
+          to="/"
           className="inline-flex items-center gap-2 text-[#ffc000] hover:opacity-80 transition-opacity mb-8"
         >
           <ChevronLeft className="w-5 h-5" />
