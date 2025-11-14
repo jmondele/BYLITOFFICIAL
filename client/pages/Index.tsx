@@ -103,11 +103,11 @@ export default function Index() {
         </video>
         <div className="absolute inset-0 flex items-center justify-center">
           <button className="text-[#F2F2F2] hover:opacity-80 transition-opacity" aria-label="Play video">
-            <Play className="w-12 h-12" />
+            <Play className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16" />
           </button>
         </div>
-        <div className="absolute bottom-16 md:bottom-24 left-4 md:left-16 lg:left-36 max-w-xl">
-          <h1 className="text-[#F2F2F2] text-4xl md:text-5xl lg:text-7xl font-bold uppercase leading-tight tracking-wide">
+        <div className="absolute bottom-12 md:bottom-20 lg:bottom-24 left-4 md:left-12 lg:left-36 right-4 md:right-auto max-w-xl">
+          <h1 className="text-[#F2F2F2] text-3xl md:text-5xl lg:text-7xl font-bold uppercase leading-tight tracking-wide">
             <span className="font-normal">photographer</span><br />
             <span className="font-normal">Videographer</span><br />
             <span className="font-bold">Digital creator.</span>
@@ -122,17 +122,17 @@ export default function Index() {
         </h2>
 
         <div className="space-y-6 md:space-y-8 max-w-5xl">
-          <p className="text-[#F2F2F2] text-3xl md:text-5xl lg:text-6xl lowercase leading-tight tracking-wide">
+          <p className="text-[#F2F2F2] text-2xl md:text-4xl lg:text-6xl lowercase leading-tight tracking-wide">
             <span className="font-normal">I'm </span>
             <span className="font-bold text-[#ebcf33]">Ivan Achao</span>
             <span className="font-normal">. A photographer, videographer, and digital artist.</span>
           </p>
 
-          <p className="text-[#F2F2F2] text-3xl md:text-5xl lg:text-6xl font-normal lowercase leading-tight tracking-wide">
+          <p className="text-[#F2F2F2] text-2xl md:text-4xl lg:text-6xl font-normal lowercase leading-tight tracking-wide">
             I create compelling visual narratives that capture authentic moments and tell meaningful stories through photography, video, and digital art.
           </p>
 
-          <p className="text-[#f2f2f2] text-3xl md:text-5xl lg:text-6xl font-bold lowercase leading-tight tracking-wide">
+          <p className="text-[#f2f2f2] text-2xl md:text-4xl lg:text-6xl font-bold lowercase leading-tight tracking-wide">
             bringing visions to life, one frame at a time.
           </p>
         </div>
@@ -140,8 +140,8 @@ export default function Index() {
 
       {/* Our Work Section */}
       <section id="work" className="py-16 md:py-24">
-        <div className="mb-0">
-          <h2 className="text-[#ffc000] text-6xl md:text-7xl lg:text-8xl font-bold uppercase leading-tight tracking-tight" style={{ fontFamily: 'Monument Extended, sans-serif' }}>
+        <div className="mb-0 px-4 md:px-0">
+          <h2 className="text-[#ffc000] text-5xl md:text-7xl lg:text-8xl font-bold uppercase leading-tight tracking-tight" style={{ fontFamily: 'Monument Extended, sans-serif' }}>
             Portfolio
           </h2>
         </div>
@@ -160,8 +160,8 @@ export default function Index() {
                 loading="lazy"
                 decoding="async"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors">
-                <h3 className="text-[#F2F2F2] text-2xl md:text-3xl lg:text-4xl uppercase" style={{ fontFamily: 'Arial, sans-serif', fontWeight: 900 }}>
+              <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors px-4">
+                <h3 className="text-[#F2F2F2] text-xl md:text-3xl lg:text-4xl uppercase text-center" style={{ fontFamily: 'Arial, sans-serif', fontWeight: 900 }}>
                   {category.title}
                 </h3>
               </div>
@@ -172,8 +172,8 @@ export default function Index() {
 
       {/* Portraits Section */}
       <section id="portraits" className="py-16 md:py-24">
-        <div className="mb-0">
-          <h2 className="text-[#ffc000] text-6xl md:text-7xl lg:text-8xl font-bold uppercase leading-tight tracking-tight" style={{ fontFamily: 'Monument Extended, sans-serif' }}>
+        <div className="mb-0 px-4 md:px-0">
+          <h2 className="text-[#ffc000] text-5xl md:text-7xl lg:text-8xl font-bold uppercase leading-tight tracking-tight" style={{ fontFamily: 'Monument Extended, sans-serif' }}>
             Portraits
           </h2>
         </div>
@@ -203,9 +203,9 @@ export default function Index() {
           clients
         </h2>
 
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 md:gap-8 mb-12 md:mb-16">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-6 lg:gap-8 mb-12 md:mb-16">
           {clientLogos.map((logo) => (
-            <div key={logo.id} className="bg-white/5 backdrop-blur-sm h-20 md:h-24 flex items-center justify-center p-4 md:p-6 rounded-lg hover:bg-white/10 transition-all duration-300 border border-white/10">
+            <div key={logo.id} className="bg-white/5 backdrop-blur-sm h-16 md:h-20 lg:h-24 flex items-center justify-center p-3 md:p-4 lg:p-6 rounded-lg hover:bg-white/10 transition-all duration-300 border border-white/10">
               {logo.image ? (
                 <img src={logo.image} alt={logo.alt} className="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" decoding="async" />
               ) : (
@@ -215,17 +215,17 @@ export default function Index() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="border-2 border-[#E0E0E0] p-6 md:p-9 rounded">
-              <p className="text-[#F2F2F2] text-lg md:text-2xl mb-8 md:mb-12">
+            <div key={index} className="border-2 border-[#E0E0E0] p-6 md:p-8 lg:p-9 rounded">
+              <p className="text-[#F2F2F2] text-base md:text-lg lg:text-xl mb-6 md:mb-8 lg:mb-10 leading-relaxed">
                 "{testimonial.quote}"
               </p>
-              <div className="flex items-center gap-6">
-                <div className="w-16 h-16 md:w-18 md:h-18 rounded-full bg-[#333] flex-shrink-0"></div>
+              <div className="flex items-center gap-4 md:gap-6">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#333] flex-shrink-0"></div>
                 <div>
-                  <p className="text-[#F2F2F2] text-base md:text-lg font-bold">{testimonial.author}</p>
-                  <p className="text-[#F2F2F2] text-sm md:text-base">{testimonial.position}</p>
+                  <p className="text-[#F2F2F2] text-sm md:text-base lg:text-lg font-bold">{testimonial.author}</p>
+                  <p className="text-[#F2F2F2] text-xs md:text-sm lg:text-base">{testimonial.position}</p>
                 </div>
               </div>
             </div>
@@ -248,35 +248,35 @@ export default function Index() {
           contact
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 mb-16 md:mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 mb-12 md:mb-16 lg:mb-20">
           <div>
-            <h3 className="text-[#F2F2F2] text-4xl md:text-5xl lg:text-6xl uppercase font-normal mb-4">
+            <h3 className="text-[#F2F2F2] text-3xl md:text-4xl lg:text-5xl uppercase font-normal mb-3 md:mb-4">
               Panama
             </h3>
-            <p className="text-[#F2F2F2] text-xl md:text-2xl lg:text-3xl uppercase leading-relaxed mb-8">
+            <p className="text-[#F2F2F2] text-lg md:text-xl lg:text-2xl uppercase leading-relaxed mb-6 md:mb-8">
               Panama City, Panama
             </p>
             <a
               href="mailto:ivan@achao.com"
-              className="text-[#ffc000] text-lg md:text-xl lg:text-2xl hover:text-[#F2F2F2] transition-colors inline-block mb-3"
+              className="text-[#ffc000] text-base md:text-lg lg:text-xl hover:text-[#F2F2F2] transition-colors inline-block mb-2 md:mb-3"
             >
               ivan@achao.com
             </a>
-            <p className="text-[#828282] text-lg md:text-xl uppercase">
+            <p className="text-[#828282] text-sm md:text-base lg:text-lg uppercase">
               Available for projects worldwide
             </p>
           </div>
 
           <div>
-            <h3 className="text-[#F2F2F2] text-xl md:text-2xl font-bold uppercase mb-6">
+            <h3 className="text-[#F2F2F2] text-lg md:text-xl lg:text-2xl font-bold uppercase mb-4 md:mb-6">
               Follow
             </h3>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3 md:gap-4">
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#828282] hover:text-[#ffc000] transition-colors text-lg md:text-xl uppercase"
+                className="text-[#828282] hover:text-[#ffc000] transition-colors text-base md:text-lg lg:text-xl uppercase"
               >
                 Instagram
               </a>
@@ -284,7 +284,7 @@ export default function Index() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#828282] hover:text-[#ffc000] transition-colors text-lg md:text-xl uppercase"
+                className="text-[#828282] hover:text-[#ffc000] transition-colors text-base md:text-lg lg:text-xl uppercase"
               >
                 LinkedIn
               </a>
@@ -292,7 +292,7 @@ export default function Index() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#828282] hover:text-[#ffc000] transition-colors text-lg md:text-xl uppercase"
+                className="text-[#828282] hover:text-[#ffc000] transition-colors text-base md:text-lg lg:text-xl uppercase"
               >
                 Twitter
               </a>
@@ -300,7 +300,7 @@ export default function Index() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#828282] hover:text-[#ffc000] transition-colors text-lg md:text-xl uppercase"
+                className="text-[#828282] hover:text-[#ffc000] transition-colors text-base md:text-lg lg:text-xl uppercase"
               >
                 Facebook
               </a>
