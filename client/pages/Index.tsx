@@ -146,7 +146,7 @@ export default function Index() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
           {workCategories.map((category) => (
             <Link
               key={category.id}
