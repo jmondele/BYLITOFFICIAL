@@ -244,7 +244,7 @@ export default function Index() {
 
       {/* Contact Section */}
       <section id="contact" className="px-4 md:px-16 lg:px-36 py-16 md:py-24 pb-24 md:pb-32">
-        <h2 className="text-[#333] text-xl md:text-2xl font-bold underline lowercase mb-8 md:mb-12" style={{ fontFamily: 'Prestige Elite Std, monospace' }}>
+        <h2 className="text-[#F2F2F2] text-xl md:text-2xl font-bold underline lowercase mb-8 md:mb-12" style={{ fontFamily: 'Prestige Elite Std, monospace' }}>
           contact
         </h2>
 
@@ -262,7 +262,7 @@ export default function Index() {
               <p className="text-[#828282] text-lg md:text-xl lg:text-2xl">
                 ivan@achao.com
               </p>
-              <p className="text-[#828282] text-lg md:text-xl lg:text-2xl">
+              <p className="text-[#828282] text-lg md:text-xl lg:text-2xl uppercase">
                 Available for projects worldwide
               </p>
             </div>
