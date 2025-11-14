@@ -198,51 +198,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Clients Section */}
-      <section id="clients" className="px-4 md:px-16 lg:px-36 py-16 md:py-24">
-        <h2 className="text-[#F2F2F2] text-xl md:text-2xl font-bold underline lowercase mb-8 md:mb-12" style={{ fontFamily: 'Prestige Elite Std, monospace' }}>
-          clients
-        </h2>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-6 lg:gap-8 mb-12 md:mb-16">
-          {clientLogos.map((logo) => (
-            <div key={logo.id} className="bg-white/5 backdrop-blur-sm h-16 md:h-20 lg:h-24 flex items-center justify-center p-3 md:p-4 lg:p-6 rounded-lg hover:bg-white/10 transition-all duration-300 border border-white/10">
-              {logo.image ? (
-                <img src={logo.image} alt={logo.alt} className="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" decoding="async" />
-              ) : (
-                <div className="w-full h-full bg-[#C4C4C4]/20 rounded"></div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="border-2 border-[#E0E0E0] p-6 md:p-8 lg:p-9 rounded">
-              <p className="text-[#F2F2F2] text-base md:text-lg lg:text-xl mb-6 md:mb-8 lg:mb-10 leading-relaxed">
-                "{testimonial.quote}"
-              </p>
-              <div className="flex items-center gap-4 md:gap-6">
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#333] flex-shrink-0"></div>
-                <div>
-                  <p className="text-[#F2F2F2] text-sm md:text-base lg:text-lg font-bold">{testimonial.author}</p>
-                  <p className="text-[#F2F2F2] text-xs md:text-sm lg:text-base">{testimonial.position}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="flex items-center justify-center gap-8 md:gap-12">
-          <button className="text-[#BDBDBD] hover:text-[#F2F2F2] transition-colors" aria-label="Previous testimonial">
-            <ChevronLeft className="w-10 h-10 md:w-12 md:h-12" strokeWidth={1.5} />
-          </button>
-          <button className="text-[#F2F2F2] hover:opacity-80 transition-opacity" aria-label="Next testimonial">
-            <ChevronRight className="w-10 h-10 md:w-12 md:h-12" strokeWidth={1.5} />
-          </button>
-        </div>
-      </section>
-
       {/* Featured In Section */}
       <section className="px-4 md:px-16 lg:px-36 py-16 md:py-24 bg-[#1a1a1a]">
         <h2 className="text-[#F2F2F2] text-xl md:text-2xl font-bold underline lowercase mb-8 md:mb-12" style={{ fontFamily: 'Prestige Elite Std, monospace' }}>
