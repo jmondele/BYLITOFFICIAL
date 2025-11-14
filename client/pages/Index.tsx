@@ -43,6 +43,7 @@ export default function Index() {
     { id: 8, image: "/bemba/PRINCIPAL bemba.jpg", title: "BEMBA", slug: "bemba" },
     { id: 9, image: "/lust panama/PRINCIPAL lust.jpg", title: "LUST PANAMA", slug: "lust-panama" },
     { id: 10, image: "/us projec/PRINCIPAL US.jpg", title: "US PROJEC", slug: "us-projec" },
+    { id: 11, image: "/CONCERT&PARTY PESTAÑA/PRINCIPAL.jpg", title: "CONCERTS & PARTY", slug: "concerts-party" },
   ];
 
   const portraits = Array.from({ length: 64 }, (_, i) => ({
