@@ -45,6 +45,11 @@ export default function Index() {
     { id: 10, image: "/us projec/PRINCIPAL US.jpg", title: "US PROJEC", span: "col-span-2", slug: "us-projec" },
   ];
 
+  const portraits = Array.from({ length: 64 }, (_, i) => ({
+    id: i + 1,
+    image: i === 0 ? "/portraits/PRINCIPAL retratos.jpg" : `/portraits/re (${i}).jpg`,
+  }));
+
   const clientLogos = [
     { id: 1, image: "/diesel-seeklogo.png", alt: "Diesel" },
     { id: 2, image: "/adidas-trefoil-seeklogo.png", alt: "Adidas" },
@@ -159,6 +164,31 @@ export default function Index() {
                 </h3>
               </div>
             </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Portraits Section */}
+      <section id="portraits" className="py-16 md:py-24">
+        <div className="mb-0">
+          <h2 className="text-[#ffc000] text-6xl md:text-7xl lg:text-8xl font-bold uppercase leading-tight tracking-tight" style={{ fontFamily: 'Monument Extended, sans-serif' }}>
+            Portraits
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0">
+          {portraits.map((portrait) => (
+            <div
+              key={portrait.id}
+              className="relative group aspect-square overflow-hidden cursor-pointer"
+            >
+              <img
+                src={portrait.image}
+                alt={`Portrait ${portrait.id}`}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+            </div>
           ))}
         </div>
       </section>

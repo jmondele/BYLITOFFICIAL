@@ -77,6 +77,13 @@ export default function Header({ variant = "dark" }: HeaderProps) {
                   Portfolio
                 </a>
                 <a
+                  href="#portraits"
+                  onClick={() => setMenuOpen(false)}
+                  className="text-[#F2F2F2] text-3xl md:text-4xl uppercase tracking-wider hover:opacity-80 transition-opacity"
+                >
+                  Portraits
+                </a>
+                <a
                   href="#clients"
                   onClick={() => setMenuOpen(false)}
                   className="text-[#F2F2F2] text-3xl md:text-4xl uppercase tracking-wider hover:opacity-80 transition-opacity"
@@ -106,6 +113,13 @@ export default function Header({ variant = "dark" }: HeaderProps) {
                   className="text-[#F2F2F2] text-3xl md:text-4xl uppercase tracking-wider hover:opacity-80 transition-opacity"
                 >
                   Portfolio
+                </Link>
+                <Link
+                  to="/#portraits"
+                  onClick={() => setMenuOpen(false)}
+                  className="text-[#F2F2F2] text-3xl md:text-4xl uppercase tracking-wider hover:opacity-80 transition-opacity"
+                >
+                  Portraits
                 </Link>
                 <Link
                   to="/#clients"
