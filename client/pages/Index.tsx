@@ -243,6 +243,49 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Featured In Section */}
+      <section className="px-4 md:px-16 lg:px-36 py-16 md:py-24 bg-[#1a1a1a]">
+        <h2 className="text-[#F2F2F2] text-xl md:text-2xl font-bold underline lowercase mb-8 md:mb-12" style={{ fontFamily: 'Prestige Elite Std, monospace' }}>
+          featured in
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <a
+            href="https://www.vibe.com/music/music-news/gordo-formerly-known-carnage-album-diamante-interview-1234897218/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-2 border-[#E0E0E0] p-6 md:p-8 rounded hover:border-[#ffc000] transition-colors group"
+          >
+            <div className="flex flex-col gap-4">
+              <h3 className="text-[#ffc000] text-2xl md:text-3xl font-bold uppercase">VIBE</h3>
+              <p className="text-[#F2F2F2] text-base md:text-lg leading-relaxed">
+                Gordo (Formerly Known as Carnage) on His Album 'DIAMANTE'
+              </p>
+              <span className="text-[#828282] text-sm md:text-base group-hover:text-[#ffc000] transition-colors">
+                Read Article →
+              </span>
+            </div>
+          </a>
+
+          <a
+            href="https://www.rollingstone.com/music/music-features/gordo-diamante-album-interview-drake-1235065735/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-2 border-[#E0E0E0] p-6 md:p-8 rounded hover:border-[#ffc000] transition-colors group"
+          >
+            <div className="flex flex-col gap-4">
+              <h3 className="text-[#ffc000] text-2xl md:text-3xl font-bold uppercase">ROLLING STONE</h3>
+              <p className="text-[#F2F2F2] text-base md:text-lg leading-relaxed">
+                Gordo on Why His Genre-Twisting, Drake-Assisted Album Isn't Like Anything Else Out There
+              </p>
+              <span className="text-[#828282] text-sm md:text-base group-hover:text-[#ffc000] transition-colors">
+                Read Article →
+              </span>
+            </div>
+          </a>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="px-4 md:px-16 lg:px-36 py-16 md:py-24">
         <h2 className="text-[#F2F2F2] text-xl md:text-2xl font-bold underline lowercase mb-12 md:mb-16" style={{ fontFamily: 'Prestige Elite Std, monospace' }}>
