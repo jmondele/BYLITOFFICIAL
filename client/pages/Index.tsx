@@ -151,7 +151,7 @@ export default function Index() {
             <Link
               key={category.id}
               to={`/campaign/${category.slug}`}
-              className={`relative group ${category.span} aspect-video md:aspect-square overflow-hidden cursor-pointer`}
+              className={`relative group ${category.span} aspect-video overflow-hidden cursor-pointer`}
             >
               <img
                 src={category.image}
