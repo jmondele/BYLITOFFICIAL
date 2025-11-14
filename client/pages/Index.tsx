@@ -151,12 +151,12 @@ export default function Index() {
             <Link
               key={category.id}
               to={`/campaign/${category.slug}`}
-              className="relative group overflow-hidden cursor-pointer"
+              className="relative group cursor-pointer"
             >
               <img
                 src={category.image}
                 alt={category.title}
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-contain block"
                 loading="lazy"
                 decoding="async"
               />
