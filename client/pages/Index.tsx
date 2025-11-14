@@ -157,6 +157,8 @@ export default function Index() {
                 src={category.image}
                 alt={category.title}
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors">
                 <h3 className="text-[#F2F2F2] text-2xl md:text-3xl lg:text-4xl uppercase" style={{ fontFamily: 'Arial, sans-serif', fontWeight: 900 }}>
@@ -186,6 +188,8 @@ export default function Index() {
                 src={portrait.image}
                 alt={`Portrait ${portrait.id}`}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
             </div>
@@ -203,7 +207,7 @@ export default function Index() {
           {clientLogos.map((logo) => (
             <div key={logo.id} className="bg-white/5 backdrop-blur-sm h-20 md:h-24 flex items-center justify-center p-4 md:p-6 rounded-lg hover:bg-white/10 transition-all duration-300 border border-white/10">
               {logo.image ? (
-                <img src={logo.image} alt={logo.alt} className="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity" />
+                <img src={logo.image} alt={logo.alt} className="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" decoding="async" />
               ) : (
                 <div className="w-full h-full bg-[#C4C4C4]/20 rounded"></div>
               )}
