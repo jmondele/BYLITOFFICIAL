@@ -33,7 +33,7 @@ export default function Index() {
     }
   }, [currentVideoIndex]);
   const workCategories = [
-    { id: 1, image: "/diesel/PRINCIPAL.jpg", title: "Diesel", span: "col-span-2", slug: "diesel" },
+    { id: 1, image: "/diesel/PRINCIPAL.jpg", title: "Diesel", span: "col-span-1", slug: "diesel" },
     { id: 2, image: "/redox/PRINCIPAL redox.jpg", title: "ReDOX", span: "col-span-1", slug: "redox" },
     { id: 3, image: "/vibram/PRINCIPAL vibram.jpg", title: "Vibram", span: "col-span-1", slug: "vibram" },
     { id: 4, image: "/millionvvv/PRINCIPALmillionvvv.jpg", title: "Millionvvv", span: "col-span-2", slug: "millionvvv" },
