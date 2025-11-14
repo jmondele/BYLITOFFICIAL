@@ -238,7 +238,7 @@ export default function CampaignDetail() {
       </section>
 
       {/* Campaign Images Grid */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 md:px-16 lg:px-36 mb-12 md:mb-16">
+      <section className="grid grid-cols-2 gap-4 px-4 md:px-16 lg:px-36 mb-12 md:mb-16">
         {campaign.images.map((image, index) => (
           <div key={index} className="rounded-lg">
             <img
