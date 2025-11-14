@@ -172,13 +172,13 @@ export default function Index() {
 
       {/* Portraits Section */}
       <section id="portraits" className="py-16 md:py-24">
-        <div className="mb-0">
+        <div className="mb-0 px-4 md:px-0">
           <h2 className="text-[#ffc000] text-4xl md:text-7xl lg:text-8xl font-bold uppercase leading-tight tracking-tight whitespace-nowrap" style={{ fontFamily: 'Monument Extended, sans-serif' }}>
             Portraits
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0 w-full">
           {portraits.map((portrait) => (
             <div
               key={portrait.id}
