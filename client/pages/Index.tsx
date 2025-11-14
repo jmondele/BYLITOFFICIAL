@@ -243,30 +243,75 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="px-4 md:px-16 lg:px-36 py-16 md:py-24 pb-24 md:pb-32">
-        <h2 className="text-[#F2F2F2] text-xl md:text-2xl font-bold underline lowercase mb-8 md:mb-12" style={{ fontFamily: 'Prestige Elite Std, monospace' }}>
+      <section id="contact" className="px-4 md:px-16 lg:px-36 py-16 md:py-24">
+        <h2 className="text-[#F2F2F2] text-xl md:text-2xl font-bold underline lowercase mb-12 md:mb-16" style={{ fontFamily: 'Prestige Elite Std, monospace' }}>
           contact
         </h2>
 
-        <div className="max-w-3xl">
-          <div className="space-y-8 md:space-y-14">
-            <div>
-              <h3 className="text-[#F2F2F2] text-4xl md:text-5xl lg:text-7xl uppercase font-normal mb-4">
-                Panama
-              </h3>
-              <p className="text-[#F2F2F2] text-xl md:text-2xl lg:text-4xl uppercase leading-relaxed">
-                Panama City, Panama
-              </p>
-            </div>
-            <div>
-              <p className="text-[#828282] text-lg md:text-xl lg:text-2xl">
-                ivan@achao.com
-              </p>
-              <p className="text-[#828282] text-lg md:text-xl lg:text-2xl uppercase">
-                Available for projects worldwide
-              </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 mb-16 md:mb-20">
+          <div>
+            <h3 className="text-[#F2F2F2] text-4xl md:text-5xl lg:text-6xl uppercase font-normal mb-4">
+              Panama
+            </h3>
+            <p className="text-[#F2F2F2] text-xl md:text-2xl lg:text-3xl uppercase leading-relaxed mb-8">
+              Panama City, Panama
+            </p>
+            <a
+              href="mailto:ivan@achao.com"
+              className="text-[#ffc000] text-lg md:text-xl lg:text-2xl hover:text-[#F2F2F2] transition-colors inline-block mb-3"
+            >
+              ivan@achao.com
+            </a>
+            <p className="text-[#828282] text-lg md:text-xl uppercase">
+              Available for projects worldwide
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-[#F2F2F2] text-xl md:text-2xl font-bold uppercase mb-6">
+              Follow
+            </h3>
+            <div className="flex flex-col gap-4">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#828282] hover:text-[#ffc000] transition-colors text-lg md:text-xl uppercase"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#828282] hover:text-[#ffc000] transition-colors text-lg md:text-xl uppercase"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#828282] hover:text-[#ffc000] transition-colors text-lg md:text-xl uppercase"
+              >
+                Twitter
+              </a>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#828282] hover:text-[#ffc000] transition-colors text-lg md:text-xl uppercase"
+              >
+                Facebook
+              </a>
             </div>
           </div>
+        </div>
+
+        <div className="border-t border-[#444] pt-8">
+          <p className="text-[#828282] text-sm md:text-base">
+            © {new Date().getFullYear()} Ivan Achao. All rights reserved.
+          </p>
         </div>
       </section>
     </div>
