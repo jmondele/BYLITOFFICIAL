@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 export default function Index() {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const videos = ["/DOS_90.MP4", "/s.mp4"];
+  const videos = ["/vid.mp4"];
 
   useEffect(() => {
     const videoElement = videoRef.current;
