@@ -11,6 +11,7 @@ import Work from "./pages/Work";
 import ProjectDetail from "./pages/ProjectDetail";
 import CampaignDetail from "./pages/CampaignDetail";
 import NotFound from "./pages/NotFound";
+import { Analytics } from "@vercel/analytics/next"
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/campaign/:name" element={<CampaignDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
+          <Analytics />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
