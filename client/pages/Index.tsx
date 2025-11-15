@@ -199,7 +199,7 @@ export default function Index() {
       </section>
 
       {/* Featured In Section */}
-      <section className="px-4 md:px-16 lg:px-36 py-16 md:py-24 bg-[#1a1a1a]">
+      <section id="featured" className="px-4 md:px-16 lg:px-36 py-16 md:py-24 bg-[#1a1a1a]">
         <h2 className="text-[#F2F2F2] text-xl md:text-2xl font-bold underline lowercase mb-8 md:mb-12" style={{ fontFamily: 'Prestige Elite Std, monospace' }}>
           featured in
         </h2>
@@ -256,10 +256,10 @@ export default function Index() {
               Panama City, Panama
             </p>
             <a
-              href="mailto:ivan@achao.com"
+              href="mailto:ivanachao540@gmail.com"
               className="text-[#ffc000] text-base md:text-lg lg:text-xl hover:text-[#F2F2F2] transition-colors inline-block mb-2 md:mb-3"
             >
-              ivan@achao.com
+              ivanachao540@gmail.com
             </a>
             <p className="text-[#828282] text-sm md:text-base lg:text-lg uppercase">
               Available for projects worldwide
@@ -272,7 +272,7 @@ export default function Index() {
             </h3>
             <div className="flex flex-col gap-3 md:gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/by.litt/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#828282] hover:text-[#ffc000] transition-colors text-base md:text-lg lg:text-xl uppercase"
@@ -280,28 +280,12 @@ export default function Index() {
                 Instagram
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/ivan-acu%C3%B1a-172328162/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#828282] hover:text-[#ffc000] transition-colors text-base md:text-lg lg:text-xl uppercase"
               >
                 LinkedIn
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#828282] hover:text-[#ffc000] transition-colors text-base md:text-lg lg:text-xl uppercase"
-              >
-                Twitter
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#828282] hover:text-[#ffc000] transition-colors text-base md:text-lg lg:text-xl uppercase"
-              >
-                Facebook
               </a>
             </div>
           </div>
