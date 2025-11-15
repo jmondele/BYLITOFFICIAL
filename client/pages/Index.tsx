@@ -238,6 +238,23 @@ export default function Index() {
               </span>
             </div>
           </a>
+
+          <a
+            href="https://gq.co.za/culture/entertainment/2024-03-11-beyond-the-decks-gordos-journey-in-dominating-latin-americas-music-scene/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-2 border-[#E0E0E0] p-6 md:p-8 rounded hover:border-[#ffc000] transition-colors group"
+          >
+            <div className="flex flex-col gap-4">
+              <h3 className="text-[#ffc000] text-2xl md:text-3xl font-bold uppercase">GQ</h3>
+              <p className="text-[#F2F2F2] text-base md:text-lg leading-relaxed">
+                Beyond the Decks: GORDO's journey in dominating Latin America's music scene
+              </p>
+              <span className="text-[#828282] text-sm md:text-base group-hover:text-[#ffc000] transition-colors">
+                Read Article →
+              </span>
+            </div>
+          </a>
         </div>
       </section>
 
