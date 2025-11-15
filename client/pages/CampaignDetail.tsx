@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Header from "@/components/Header";
 
 // Campaign data with all images
@@ -240,7 +240,6 @@ const campaignKeys = Object.keys(campaignData);
 
 export default function CampaignDetail() {
   const { name } = useParams<{ name: string }>();
-  const navigate = useNavigate();
 
   const campaign = name ? campaignData[name] : null;
   const currentIndex = name ? campaignKeys.indexOf(name) : -1;

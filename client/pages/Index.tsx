@@ -1,37 +1,61 @@
-import { Play, ChevronLeft, ChevronRight } from "lucide-react";
+import { Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import Header from "@/components/Header";
 
 export default function Index() {
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [isVideoReady, setIsVideoReady] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const videos = ["/vid.mp4"];
+  const heroSectionRef = useRef<HTMLDivElement>(null);
 
+  // Optimized video loading with Intersection Observer
   useEffect(() => {
     const videoElement = videoRef.current;
-    if (!videoElement) return;
+    const heroSection = heroSectionRef.current;
 
-    const handleVideoEnd = () => {
-      setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
+    if (!videoElement || !heroSection) return;
+
+    // Preload video on component mount for instant playback
+    const preloadVideo = () => {
+      if (videoElement && !isVideoLoaded) {
+        videoElement.load();
+        setIsVideoLoaded(true);
+      }
     };
 
-    videoElement.addEventListener("ended", handleVideoEnd);
+    // Start preloading immediately for hero video
+    const preloadTimer = setTimeout(preloadVideo, 100);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Play video when it enters viewport
+            videoElement.play().catch((error) => {
+              console.error("Error playing video:", error);
+            });
+          } else {
+            // Pause when out of viewport to save resources
+            videoElement.pause();
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "50px" }
+    );
+
+    observer.observe(heroSection);
+
+    // Handle video ready state
+    const handleCanPlay = () => setIsVideoReady(true);
+    videoElement.addEventListener('canplay', handleCanPlay);
 
     return () => {
-      videoElement.removeEventListener("ended", handleVideoEnd);
+      clearTimeout(preloadTimer);
+      observer.disconnect();
+      videoElement.removeEventListener('canplay', handleCanPlay);
     };
-  }, [videos.length]);
-
-  useEffect(() => {
-    const videoElement = videoRef.current;
-    if (videoElement) {
-      videoElement.load();
-      videoElement.play().catch((error) => {
-        console.error("Error playing video:", error);
-      });
-    }
-  }, [currentVideoIndex]);
+  }, [isVideoLoaded]);
   const workCategories = [
     { id: 1, image: "/diesel/PRINCIPAL.jpg", title: "Diesel", slug: "diesel" },
     { id: 2, image: "/redox/PRINCIPAL redox.jpg", title: "ReDOX", slug: "redox" },
@@ -51,56 +75,33 @@ export default function Index() {
     image: i === 0 ? "/portraits/PRINCIPAL retratos.jpg" : `/portraits/re (${i}).jpg`,
   }));
 
-  const clientLogos = [
-    { id: 1, image: "/diesel-seeklogo.png", alt: "Diesel" },
-    { id: 2, image: "/adidas-trefoil-seeklogo.png", alt: "Adidas" },
-    { id: 3, image: "/diesel-seeklogo.png", alt: "Client 3" },
-    { id: 4, image: "/adidas-trefoil-seeklogo.png", alt: "Client 4" },
-    { id: 5, image: "/diesel-seeklogo.png", alt: "Client 5" },
-    { id: 6, image: "/adidas-trefoil-seeklogo.png", alt: "Client 6" },
-    { id: 7, image: "/diesel-seeklogo.png", alt: "Client 7" },
-    { id: 8, image: "/adidas-trefoil-seeklogo.png", alt: "Client 8" },
-    { id: 9, image: "/diesel-seeklogo.png", alt: "Client 9" },
-    { id: 10, image: "/adidas-trefoil-seeklogo.png", alt: "Client 10" },
-    { id: 11, image: "/diesel-seeklogo.png", alt: "Client 11" },
-    { id: 12, image: "/adidas-trefoil-seeklogo.png", alt: "Client 12" },
-    { id: 13, image: "/diesel-seeklogo.png", alt: "Client 13" },
-    { id: 14, image: "/adidas-trefoil-seeklogo.png", alt: "Client 14" },
-  ];
-
-  const testimonials = [
-    {
-      quote: "They listen to what we want to execute well and they make it such an enjoyable experience.",
-      author: "Charles Ho",
-      position: "Talent Relation & Recruiting Specialist, Zuhlke"
-    },
-    {
-      quote: "Morning Media was able to take the key essence of our employer branding and make it come to life with the video.",
-      author: "Charles Ho",
-      position: "HR Business Partner, MoneySmart Group"
-    },
-    {
-      quote: "We have thrown projects at Morning Media with tight deadlines and somehow they always deliver. Our content has grown thanks to them.",
-      author: "Charles Ho",
-      position: "Co-founder, and CEO, Prive Technologies"
-    }
-  ];
 
   return (
     <div className="bg-[#222] min-h-screen">
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-screen">
+      <section ref={heroSectionRef} className="relative h-screen bg-[#222]">
+        {/* Loading placeholder */}
+        {!isVideoReady && (
+          <div className="absolute inset-0 bg-[#222] animate-pulse">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#222]/50 to-[#222]" />
+          </div>
+        )}
+
         <video
           ref={videoRef}
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+            isVideoReady ? 'opacity-100' : 'opacity-0'
+          }`}
           muted
+          loop
           playsInline
-          key={currentVideoIndex}
+          preload="auto"
+          poster="/video-poster.jpg"
         >
-          <source src={videos[currentVideoIndex]} type="video/mp4" />
+          <source src="/vid.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 flex items-center justify-center">
           <button className="text-[#F2F2F2] hover:opacity-80 transition-opacity" aria-label="Play video">
@@ -183,12 +184,12 @@ export default function Index() {
           {portraits.map((portrait) => (
             <div
               key={portrait.id}
-              className="relative group aspect-square overflow-hidden cursor-pointer"
+              className="relative group overflow-hidden cursor-pointer"
             >
               <img
                 src={portrait.image}
                 alt={`Portrait ${portrait.id}`}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-110"
                 loading="lazy"
                 decoding="async"
               />
