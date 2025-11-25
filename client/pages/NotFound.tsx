@@ -15,6 +15,7 @@ const NotFound = () => {
   return (
     <div className="bg-[#222] min-h-screen">
       <Header />
+      <main>
       <div className="flex items-center justify-center min-h-[80vh]">
         <div className="text-center px-4">
           <h1 className="text-[#ffc000] text-8xl md:text-9xl font-bold mb-6" style={{ fontFamily: 'Monument Extended, sans-serif' }}>
@@ -31,6 +32,7 @@ const NotFound = () => {
           </Link>
         </div>
       </div>
+      </main>
     </div>
   );
 };

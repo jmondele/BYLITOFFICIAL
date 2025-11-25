@@ -13,6 +13,7 @@ export default function Work() {
     <div className="bg-[#F9F9F9] min-h-screen">
       <Header variant="light" />
 
+      <main>
       <div className="pt-32 pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
           {projects.map((project) => (
@@ -34,6 +35,7 @@ export default function Work() {
           ))}
         </div>
       </div>
+      </main>
     </div>
   );
 }

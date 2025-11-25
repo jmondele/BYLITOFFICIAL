@@ -269,6 +269,7 @@ export default function CampaignDetail() {
     <div className="bg-[#2E2E2E] min-h-screen">
       <Header variant="dark" />
 
+      <main>
       {/* Campaign Header */}
       <section className="px-4 md:px-16 lg:px-36 pt-24 md:pt-32 pb-12 md:pb-16">
         <Link
@@ -328,6 +329,7 @@ export default function CampaignDetail() {
           <div></div>
         )}
       </section>
+      </main>
     </div>
   );
 }

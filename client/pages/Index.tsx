@@ -80,6 +80,7 @@ export default function Index() {
     <div className="bg-[#222] min-h-screen">
       <Header />
 
+      <main>
       {/* Hero Section */}
       <section ref={heroSectionRef} className="relative h-screen bg-[#222]">
         {/* Loading placeholder */}
@@ -260,7 +261,7 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="px-4 md:px-16 lg:px-36 py-16 md:py-24">
+      <footer id="contact" className="px-4 md:px-16 lg:px-36 py-16 md:py-24">
         <h2 className="text-[#F2F2F2] text-xl md:text-2xl font-bold underline lowercase mb-12 md:mb-16" style={{ fontFamily: 'Prestige Elite Std, monospace' }}>
           contact
         </h2>
@@ -314,7 +315,8 @@ export default function Index() {
             © {new Date().getFullYear()} Ivan Achao. All rights reserved.
           </p>
         </div>
-      </section>
+      </footer>
+      </main>
     </div>
   );
 }

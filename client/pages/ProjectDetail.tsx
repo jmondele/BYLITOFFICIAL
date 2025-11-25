@@ -16,6 +16,7 @@ export default function ProjectDetail() {
     <div className="bg-[#2E2E2E] min-h-screen">
       <Header variant="dark" />
 
+      <main>
       {/* Hero Section */}
       <section className="relative h-screen">
         <img
@@ -117,6 +118,7 @@ export default function ProjectDetail() {
           <ChevronRight className="w-6 h-6" />
         </Link>
       </section>
+      </main>
     </div>
   );
 }
