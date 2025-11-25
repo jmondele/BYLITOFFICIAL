@@ -218,7 +218,7 @@ export default function Index() {
               <p className="text-[#F2F2F2] text-base md:text-lg leading-relaxed">
                 Gordo (Formerly Known as Carnage) on His Album 'DIAMANTE'
               </p>
-              <span className="text-[#828282] text-sm md:text-base group-hover:text-[#ffc000] transition-colors">
+              <span className="text-[#9E9E9E] text-sm md:text-base group-hover:text-[#ffc000] transition-colors">
                 Read Article →
               </span>
             </div>
@@ -235,7 +235,7 @@ export default function Index() {
               <p className="text-[#F2F2F2] text-base md:text-lg leading-relaxed">
                 Gordo on Why His Genre-Twisting, Drake-Assisted Album Isn't Like Anything Else Out There
               </p>
-              <span className="text-[#828282] text-sm md:text-base group-hover:text-[#ffc000] transition-colors">
+              <span className="text-[#9E9E9E] text-sm md:text-base group-hover:text-[#ffc000] transition-colors">
                 Read Article →
               </span>
             </div>
@@ -252,7 +252,7 @@ export default function Index() {
               <p className="text-[#F2F2F2] text-base md:text-lg leading-relaxed">
                 Beyond the Decks: GORDO's journey in dominating Latin America's music scene
               </p>
-              <span className="text-[#828282] text-sm md:text-base group-hover:text-[#ffc000] transition-colors">
+              <span className="text-[#9E9E9E] text-sm md:text-base group-hover:text-[#ffc000] transition-colors">
                 Read Article →
               </span>
             </div>
@@ -280,7 +280,7 @@ export default function Index() {
             >
               ivanachao540@gmail.com
             </a>
-            <p className="text-[#828282] text-sm md:text-base lg:text-lg uppercase">
+            <p className="text-[#9E9E9E] text-sm md:text-base lg:text-lg uppercase">
               Available for projects worldwide
             </p>
           </div>
@@ -294,7 +294,7 @@ export default function Index() {
                 href="https://www.instagram.com/by.litt/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#828282] hover:text-[#ffc000] transition-colors text-base md:text-lg lg:text-xl uppercase"
+                className="text-[#9E9E9E] hover:text-[#ffc000] transition-colors text-base md:text-lg lg:text-xl uppercase"
               >
                 Instagram
               </a>
@@ -302,7 +302,7 @@ export default function Index() {
                 href="https://www.linkedin.com/in/ivan-acu%C3%B1a-172328162/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#828282] hover:text-[#ffc000] transition-colors text-base md:text-lg lg:text-xl uppercase"
+                className="text-[#9E9E9E] hover:text-[#ffc000] transition-colors text-base md:text-lg lg:text-xl uppercase"
               >
                 LinkedIn
               </a>
@@ -311,7 +311,7 @@ export default function Index() {
         </div>
 
         <div className="border-t border-[#444] pt-8">
-          <p className="text-[#828282] text-sm md:text-base">
+          <p className="text-[#9E9E9E] text-sm md:text-base">
             © {new Date().getFullYear()} Ivan Achao. All rights reserved.
           </p>
         </div>
