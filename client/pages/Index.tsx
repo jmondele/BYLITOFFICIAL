@@ -105,7 +105,7 @@ export default function Index() {
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 flex items-center justify-center">
-          <button className="text-[#F2F2F2] hover:opacity-80 transition-opacity" aria-label="Play video">
+          <button className="text-[#F2F2F2] hover:opacity-80 transition-opacity p-2" aria-label="Play video">
             <Play className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16" />
           </button>
         </div>
@@ -158,7 +158,7 @@ export default function Index() {
             >
               <img
                 src={category.image}
-                alt={category.title}
+                alt=""
                 className="w-full h-auto object-contain block"
                 loading="lazy"
                 decoding="async"

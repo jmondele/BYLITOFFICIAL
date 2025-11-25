@@ -24,7 +24,7 @@ export default function Header({ variant = "dark" }: HeaderProps) {
           <div className="flex items-center gap-4 md:gap-6">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className={`${textColor} hover:opacity-80 transition-opacity`}
+              className={`${textColor} hover:opacity-80 transition-opacity p-2`}
               aria-label="Toggle menu"
             >
               <Menu className="w-9 h-9" />
@@ -38,7 +38,7 @@ export default function Header({ variant = "dark" }: HeaderProps) {
         <div className="fixed inset-0 bg-[#222] z-50 flex flex-col items-center justify-center">
           <button
             onClick={() => setMenuOpen(false)}
-            className="absolute top-6 md:top-8 right-4 md:right-16 text-[#F2F2F2]"
+            className="absolute top-6 md:top-8 right-4 md:right-16 text-[#F2F2F2] p-2"
             aria-label="Close menu"
           >
             <Menu className="w-9 h-9" />
