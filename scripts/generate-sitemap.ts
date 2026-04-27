@@ -4,7 +4,6 @@ import * as path from 'path';
 // Campaign data - sync this with client/pages/CampaignDetail.tsx
 const campaigns = [
   'diesel',
-  'redox',
   'vibram',
   'millionvvv',
   'mott-projec-x-adidas',

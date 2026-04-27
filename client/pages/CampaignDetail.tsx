@@ -26,18 +26,6 @@ const campaignData: Record<string, { title: string; images: string[] }> = {
       "/diesel/di (16).jpg",
     ],
   },
-  redox: {
-    title: "ReDOX",
-    images: [
-      "/redox/PRINCIPAL redox.jpg",
-      "/redox/re (1).jpg",
-      "/redox/re (2).jpg",
-      "/redox/re (3).jpg",
-      "/redox/re (4).jpg",
-      "/redox/re (5).jpg",
-      "/redox/re (6).jpg",
-    ],
-  },
   vibram: {
     title: "Vibram",
     images: [

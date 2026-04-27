@@ -58,16 +58,15 @@ export default function Index() {
   }, [isVideoLoaded]);
   const workCategories = [
     { id: 1, image: "/diesel/PRINCIPAL.jpg", title: "Diesel", slug: "diesel" },
-    { id: 2, image: "/redox/PRINCIPAL redox.jpg", title: "ReDOX", slug: "redox" },
-    { id: 3, image: "/vibram/PRINCIPAL vibram.jpg", title: "Vibram", slug: "vibram" },
-    { id: 4, image: "/millionvvv/PRINCIPALmillionvvv.jpg", title: "Millionvvv", slug: "millionvvv" },
-    { id: 5, image: "/MOTT PROJEC X ADIDAS/PRINCIPAL mott.jpg", title: "MOTT PROJEC X ADIDAS", slug: "mott-projec-x-adidas" },
-    { id: 6, image: "/GORDO PESTAÑA/PRINCIPAL gordo.jpg", title: "DJ Gordo", slug: "dj-gordo" },
-    { id: 7, image: "/DVM STUDIO/PRINCIPAL principal.jpg", title: "DVM STUDIO", slug: "dvm-studio" },
-    { id: 8, image: "/bemba/PRINCIPAL bemba.jpg", title: "BEMBA", slug: "bemba" },
-    { id: 9, image: "/lust panama/PRINCIPAL lust.jpg", title: "LUST PANAMA", slug: "lust-panama" },
-    { id: 10, image: "/us projec/PRINCIPAL US.jpg", title: "US PROJEC", slug: "us-projec" },
-    { id: 11, image: "/CONCERT&PARTY PESTAÑA/PRINCIPAL.jpg", title: "CONCERTS & PARTY", slug: "concerts-party" },
+    { id: 2, image: "/vibram/PRINCIPAL vibram.jpg", title: "Vibram", slug: "vibram" },
+    { id: 3, image: "/millionvvv/PRINCIPALmillionvvv.jpg", title: "Millionvvv", slug: "millionvvv" },
+    { id: 4, image: "/MOTT PROJEC X ADIDAS/PRINCIPAL mott.jpg", title: "MOTT PROJEC X ADIDAS", slug: "mott-projec-x-adidas" },
+    { id: 5, image: "/GORDO PESTAÑA/PRINCIPAL gordo.jpg", title: "DJ Gordo", slug: "dj-gordo" },
+    { id: 6, image: "/DVM STUDIO/PRINCIPAL principal.jpg", title: "DVM STUDIO", slug: "dvm-studio" },
+    { id: 7, image: "/bemba/PRINCIPAL bemba.jpg", title: "BEMBA", slug: "bemba" },
+    { id: 8, image: "/lust panama/PRINCIPAL lust.jpg", title: "LUST PANAMA", slug: "lust-panama" },
+    { id: 9, image: "/us projec/PRINCIPAL US.jpg", title: "US PROJEC", slug: "us-projec" },
+    { id: 10, image: "/CONCERT&PARTY PESTAÑA/PRINCIPAL.jpg", title: "CONCERTS & PARTY", slug: "concerts-party" },
   ];
 
   const portraits = Array.from({ length: 64 }, (_, i) => ({
