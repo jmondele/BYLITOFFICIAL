@@ -18,8 +18,6 @@ const campaignData: Record<string, { title: string; images: string[] }> = {
       "/diesel/di (8).jpg",
       "/diesel/di (9).jpg",
       "/diesel/di (10).jpg",
-      "/diesel/di (11).jpg",
-      "/diesel/di (12).jpg",
       "/diesel/di (13).jpg",
       "/diesel/di (14).jpg",
       "/diesel/di (15).jpg",
@@ -29,14 +27,10 @@ const campaignData: Record<string, { title: string; images: string[] }> = {
   vibram: {
     title: "Vibram",
     images: [
-      "/vibram/PRINCIPAL vibram.jpg",
       "/vibram/vibram (1).jpg",
       "/vibram/vibram (2).jpg",
-      "/vibram/vibram (3).jpg",
-      "/vibram/vibram (4).jpg",
       "/vibram/vibram (5).jpg",
       "/vibram/vibram (6).jpg",
-      "/vibram/vibram (7).jpg",
       "/vibram/vibram (8).jpg",
       "/vibram/vibram (9).jpg",
       "/vibram/vibram (10).jpg",

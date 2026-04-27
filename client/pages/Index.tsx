@@ -58,7 +58,7 @@ export default function Index() {
   }, [isVideoLoaded]);
   const workCategories = [
     { id: 1, image: "/diesel/PRINCIPAL.jpg", title: "Diesel", slug: "diesel" },
-    { id: 2, image: "/vibram/PRINCIPAL vibram.jpg", title: "Vibram", slug: "vibram" },
+    { id: 2, image: "/vibram/vibram (1).jpg", title: "Vibram", slug: "vibram" },
     { id: 3, image: "/millionvvv/PRINCIPALmillionvvv.jpg", title: "Millionvvv", slug: "millionvvv" },
     { id: 4, image: "/MOTT PROJEC X ADIDAS/PRINCIPAL mott.jpg", title: "MOTT PROJEC X ADIDAS", slug: "mott-projec-x-adidas" },
     { id: 5, image: "/GORDO PESTAÑA/PRINCIPAL gordo.jpg", title: "DJ Gordo", slug: "dj-gordo" },
@@ -69,9 +69,25 @@ export default function Index() {
     { id: 10, image: "/CONCERT&PARTY PESTAÑA/PRINCIPAL.jpg", title: "CONCERTS & PARTY", slug: "concerts-party" },
   ];
 
-  const portraits = Array.from({ length: 64 }, (_, i) => ({
+  // Available portrait numbers (some are missing from the sequence)
+  const portraitNumbers = [
+    "PRINCIPAL retratos.jpg",
+    "re (1).jpg", "re (2).jpg", "re (3).jpg", "re (4).jpg", "re (5).jpg",
+    "re (6).jpg", "re (7).jpg", "re (8).jpg", "re (9).jpg", "re (10).jpg",
+    "re (11).jpg", "re (12).jpg", "re (13).jpg", "re (16).jpg", "re (20).jpg",
+    "re (23).jpg", "re (24).jpg", "re (25).jpg", "re (26).jpg", "re (27).jpg",
+    "re (28).jpg", "re (29).jpg", "re (30).jpg", "re (31).jpg", "re (32).jpg",
+    "re (33).jpg", "re (34).jpg", "re (35).jpg", "re (36).jpg", "re (37).jpg",
+    "re (38).jpg", "re (42).jpg", "re (46).jpg", "re (47).jpg", "re (48).jpg",
+    "re (49).jpg", "re (50).jpg", "re (51).jpg", "re (52).jpg", "re (53).jpg",
+    "re (54).jpg", "re (55).jpg", "re (56).jpg", "re (57).jpg", "re (58).jpg",
+    "re (59).jpg", "re (60).jpg", "re (61).jpg", "re (62).jpg", "re (63).jpg",
+    "re (64).jpg"
+  ];
+
+  const portraits = portraitNumbers.map((filename, i) => ({
     id: i + 1,
-    image: i === 0 ? "/portraits/PRINCIPAL retratos.jpg" : `/portraits/re (${i}).jpg`,
+    image: `/portraits/${filename}`,
   }));
 
 
